@@ -14,27 +14,25 @@
   <meta name="keywords" content="legal, documents, simplify, contract, agreement, legalese, summary, AI, demystify" />
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <!-- FontAwesome placeholder kit (replace with actual kit) -->
+  <!-- FontAwesome kit (replace 'abcd1234' with real kit id if available) -->
   <script src="https://kit.fontawesome.com/abcd1234.js" crossorigin="anonymous" defer></script>
-  <!-- Icons for mobile/desktop -->
   <link rel="icon" href="assets/favicon.ico" />
 </head>
 <body>
   <!-- ===========================
-       NAVBAR
+       HEADER / NAVBAR
        =========================== -->
   <header class="site-header" id="header">
-    <nav class="navbar container">
+    <nav class="navbar container" role="navigation" aria-label="Main navigation">
       <div class="brand">
         <a href="#home" aria-label="LegalEase home" class="logo">
-          <img src="assets/logo-light.svg" alt="LegalEase logo" class="logo-img">
+          <img src="assets/logo-light.svg" alt="LegalEase logo" class="logo-img" />
           <span class="brand-text">LegalEase</span>
         </a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <i class="fas fa-bars"></i>
+      <button class="nav-toggle" id="navToggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
 
       <ul class="nav-links" id="primary-navigation" role="menubar">
@@ -56,18 +54,21 @@
   </header>
 
   <!-- ===========================
-       HERO / LANDING
+       MAIN CONTENT
        =========================== -->
   <main>
-    <section id="home" class="hero container">
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero container" aria-labelledby="heroTitle">
       <div class="hero-left">
-        <h1 class="hero-title">Demystifying Legal Documents — <span class="highlight">Understand, Decide, Protect</span></h1>
+        <h1 id="heroTitle" class="hero-title">
+          Demystifying Legal Documents — <span class="highlight">Understand, Decide, Protect</span>
+        </h1>
         <p class="hero-sub">Upload your contract, agreement, or legal text and get a clear plain-language summary, risk flags, and highlighted obligations in seconds.</p>
 
-        <ul class="hero-bullets">
-          <li><i class="fas fa-check-circle"></i> Instant plain-language summaries</li>
-          <li><i class="fas fa-check-circle"></i> Key points & deadlines extracted</li>
-          <li><i class="fas fa-check-circle"></i> Highlight potential risks & unusual clauses</li>
+        <ul class="hero-bullets" aria-hidden="false">
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Instant plain-language summaries</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Key points & deadlines extracted</li>
+          <li><i class="fas fa-check-circle" aria-hidden="true"></i> Highlight potential risks & unusual clauses</li>
         </ul>
 
         <div class="hero-cta">
@@ -76,16 +77,16 @@
         </div>
 
         <div class="trust-bar" aria-hidden="true">
-          <span>Trusted by</span>
-          <img src="assets/logo-company-1.svg" alt="company 1" class="trust-logo">
-          <img src="assets/logo-company-2.svg" alt="company 2" class="trust-logo">
-          <img src="assets/logo-company-3.svg" alt="company 3" class="trust-logo">
+          <span class="trust-text">Trusted by</span>
+          <img src="assets/logo-company-1.svg" alt="company 1" class="trust-logo" />
+          <img src="assets/logo-company-2.svg" alt="company 2" class="trust-logo" />
+          <img src="assets/logo-company-3.svg" alt="company 3" class="trust-logo" />
         </div>
       </div>
 
       <div class="hero-right" aria-hidden="false">
         <div class="hero-card">
-          <img src="assets/hero-illustration.svg" alt="Illustration of document being simplified" class="hero-illus">
+          <img src="assets/hero-illustration.svg" alt="Illustration of document being simplified" class="hero-illus" />
           <div class="hero-stats">
             <div class="stat">
               <strong class="stat-number" data-target="1200000">1.2M</strong>
@@ -104,99 +105,81 @@
       </div>
     </section>
 
-    <!-- ===========================
-         KEY FEATURES
-         =========================== -->
-    <section id="features" class="features container">
+    <!-- ===== FEATURES ===== -->
+    <section id="features" class="features container" aria-labelledby="featuresTitle">
       <header class="section-header">
-        <h2 class="section-title">Platform Features</h2>
+        <h2 id="featuresTitle" class="section-title">Platform Features</h2>
         <p class="section-sub">Everything you need to understand legal documents quickly — built for non-lawyers.</p>
       </header>
 
       <div class="features-grid" role="list">
-        <!-- Feature 1 -->
         <article class="feature-card" role="listitem" tabindex="0" aria-labelledby="f1-title">
-          <div class="feature-icon"><img src="assets/feature-ai.svg" alt=""></div>
+          <div class="feature-icon"><img src="assets/feature-ai.svg" alt="AI summaries icon"></div>
           <h3 id="f1-title">AI-Powered Summaries</h3>
-          <p>Upload any contract — our engine extracts clauses, simplifies legal language, and creates a short, actionable summary.</p>
+          <p>Our engine extracts clauses, simplifies legal language, and creates an actionable summary.</p>
           <ul class="feature-list">
-            <li><strong>Summary:</strong> Plain-language summary in 3–5 bullets</li>
-            <li><strong>Tone:</strong> Choose formal or conversational</li>
-            <li><strong>Language:</strong> English / Hindi support</li>
+            <li><strong>Summary:</strong> 3–5 bullets</li>
+            <li><strong>Tone:</strong> Formal / Conversational</li>
+            <li><strong>Language:</strong> English / Hindi</li>
           </ul>
         </article>
 
-        <!-- Feature 2 -->
         <article class="feature-card" role="listitem" tabindex="0" aria-labelledby="f2-title">
-          <div class="feature-icon"><img src="assets/feature-parse.svg" alt=""></div>
+          <div class="feature-icon"><img src="assets/feature-parse.svg" alt="Parsing icon"></div>
           <h3 id="f2-title">Smart Document Parsing</h3>
-          <p>We parse PDF, DOCX and TXT — detect sections, dates, monetary amounts, and parties automatically.</p>
-          <p class="muted">Supports multi-page documents and preserves clause numbering.</p>
+          <p>Parse PDF, DOCX and TXT to detect sections, dates, amounts, and parties automatically.</p>
         </article>
 
-        <!-- Feature 3 -->
         <article class="feature-card" role="listitem" tabindex="0" aria-labelledby="f3-title">
-          <div class="feature-icon"><img src="assets/feature-risk.svg" alt=""></div>
+          <div class="feature-icon"><img src="assets/feature-risk.svg" alt="Risk icon"></div>
           <h3 id="f3-title">Risk & Clause Flags</h3>
-          <p>Automatic alerts for unusual indemnities, auto-renewal clauses, penalty clauses, or ambiguous obligations.</p>
-          <p class="muted">Each flag includes an explanation and recommended next steps.</p>
+          <p>Automatic alerts for indemnities, auto-renewal, ambiguous obligations and penalties.</p>
         </article>
 
-        <!-- Feature 4 -->
         <article class="feature-card" role="listitem" tabindex="0" aria-labelledby="f4-title">
-          <div class="feature-icon"><img src="assets/feature-keypoints.svg" alt=""></div>
+          <div class="feature-icon"><img src="assets/feature-keypoints.svg" alt="Keypoints icon"></div>
           <h3 id="f4-title">Key Point Extraction</h3>
-          <p>Deadlines, payment schedules, termination conditions, and important dates are automatically highlighted.</p>
+          <p>Deadlines, payment schedules, termination conditions and important dates highlighted.</p>
         </article>
 
-        <!-- Feature 5 -->
         <article class="feature-card" role="listitem" tabindex="0" aria-labelledby="f5-title">
-          <div class="feature-icon"><img src="assets/feature-download.svg" alt=""></div>
+          <div class="feature-icon"><img src="assets/feature-download.svg" alt="Export icon"></div>
           <h3 id="f5-title">Export & Share</h3>
-          <p>Download simplified doc as PDF, copy summary, or share a read-only link with annotations.</p>
+          <p>Download simplified doc as PDF or share a read-only annotated link.</p>
         </article>
 
-        <!-- Feature 6 -->
         <article class="feature-card" role="listitem" tabindex="0" aria-labelledby="f6-title">
-          <div class="feature-icon"><img src="assets/feature-history.svg" alt=""></div>
+          <div class="feature-icon"><img src="assets/feature-history.svg" alt="History icon"></div>
           <h3 id="f6-title">Document History</h3>
-          <p>Keep track of analyzed documents, edits, and exported versions in your secure dashboard.</p>
+          <p>Track analyzed documents, edits, and exports in your secure dashboard.</p>
         </article>
       </div>
     </section>
 
-    <!-- ===========================
-         UPLOAD & ANALYZE
-         =========================== -->
-    <section id="upload" class="upload container">
+    <!-- ===== UPLOAD & ANALYZE ===== -->
+    <section id="upload" class="upload container" aria-labelledby="uploadTitle">
       <header class="section-header">
-        <h2 class="section-title">Upload & Analyze Document</h2>
-        <p class="section-sub">Supported: PDF, DOCX, DOC, TXT (max 10MB). We process on the client then send to backend for analysis.</p>
+        <h2 id="uploadTitle" class="section-title">Upload & Analyze Document</h2>
+        <p class="section-sub">Supported: PDF, DOCX, DOC, TXT (max 10MB). For production, server-side AI processes file securely.</p>
       </header>
 
       <div class="upload-panel">
         <form id="uploadForm" class="upload-form" aria-label="Upload document form" enctype="multipart/form-data" novalidate>
           <label for="docTitle" class="form-label">Document Title</label>
-          <input id="docTitle" name="docTitle" type="text" placeholder="Eg. Office Lease Agreement - Jan 2024" class="input" required>
+          <input id="docTitle" name="docTitle" type="text" placeholder="Eg. Office Lease Agreement - Jan 2024" class="input" required />
 
           <label class="form-label">Choose File</label>
           <div class="file-input-wrap">
-            <input id="fileInput" name="fileInput" type="file" accept=".pdf,.doc,.docx,.txt" class="file-input" aria-describedby="fileHelp">
+            <input id="fileInput" name="fileInput" type="file" accept=".pdf,.doc,.docx,.txt" class="file-input" aria-describedby="fileHelp" />
             <div id="filePreview" class="file-preview">No file chosen</div>
           </div>
-          <small id="fileHelp" class="muted">Accepted formats: PDF, DOC, DOCX, TXT — max 10MB</small>
+          <small id="fileHelp" class="muted">Accepted formats: PDF, DOCX, DOC, TXT — max 10MB</small>
 
           <label class="form-label">Preferred Summary Style</label>
           <div class="radio-group">
-            <label class="radio">
-              <input type="radio" name="summaryStyle" value="concise" checked> Concise (3-5 bullets)
-            </label>
-            <label class="radio">
-              <input type="radio" name="summaryStyle" value="detailed"> Detailed (1–2 para)
-            </label>
-            <label class="radio">
-              <input type="radio" name="summaryStyle" value="legalese"> Legalese + Explanation
-            </label>
+            <label class="radio"><input type="radio" name="summaryStyle" value="concise" checked /> Concise (3-5 bullets)</label>
+            <label class="radio"><input type="radio" name="summaryStyle" value="detailed" /> Detailed (1–2 para)</label>
+            <label class="radio"><input type="radio" name="summaryStyle" value="legalese" /> Legalese + Explanation</label>
           </div>
 
           <label class="form-label">Language</label>
@@ -228,19 +211,18 @@
       </div>
     </section>
 
-    <!-- ===========================
-         INTERACTIVE DEMO (TEXTAREA)
-         =========================== -->
-    <section id="demo" class="demo container">
+    <!-- ===== DEMO / TEXT SIMPLIFIER ===== -->
+    <section id="demo" class="demo container" aria-labelledby="demoTitle">
       <header class="section-header">
-        <h2 class="section-title">Try Instant Simplify (Paste text)</h2>
-        <p class="section-sub">Paste any clause or paragraph here and click "Simplify Now". This uses a client-side simplifier for demo (production uses server AI).</p>
+        <h2 id="demoTitle" class="section-title">Try Instant Simplify (Paste text)</h2>
+        <p class="section-sub">Paste a clause or paragraph and click "Simplify Now". (Client-side demo.)</p>
       </header>
 
       <div class="demo-grid">
         <div class="demo-input">
           <label for="demoText" class="form-label">Paste legal text</label>
           <textarea id="demoText" class="textarea" rows="10" placeholder="Paste a clause or paragraph..."></textarea>
+
           <div class="demo-controls">
             <button id="simplifyBtn" class="btn btn-primary">Simplify Now</button>
             <button id="clearDemo" class="btn btn-ghost">Clear</button>
@@ -256,13 +238,11 @@
       </div>
     </section>
 
-    <!-- ===========================
-         GLOSSARY / LEGAL JARGON
-         =========================== -->
-    <section id="glossary" class="glossary container">
+    <!-- ===== GLOSSARY ===== -->
+    <section id="glossary" class="glossary container" aria-labelledby="glossaryTitle">
       <header class="section-header">
-        <h2 class="section-title">Glossary — Common Legal Terms</h2>
-        <p class="section-sub">Quick plain-language definitions of common legal terms that appear in contracts.</p>
+        <h2 id="glossaryTitle" class="section-title">Glossary — Common Legal Terms</h2>
+        <p class="section-sub">Plain-language definitions for common contract terms.</p>
       </header>
 
       <div class="glossary-grid">
@@ -278,7 +258,7 @@
 
         <article class="glossary-item" id="term-force-majeure" tabindex="0">
           <h4>Force Majeure</h4>
-          <p class="muted">Unforeseen events excuse performance (e.g., natural disasters). <strong>Plain:</strong> Neither side is blamed for things beyond control.</p>
+          <p class="muted">Unforeseen events excuse performance. <strong>Plain:</strong> Neither side is blamed for things beyond control.</p>
         </article>
 
         <article class="glossary-item" id="term-liability" tabindex="0">
@@ -298,59 +278,47 @@
       </div>
     </section>
 
-    <!-- ===========================
-         FAQ
-         =========================== -->
-    <section id="faq" class="faq container" aria-labelledby="faqHeading">
+    <!-- ===== FAQ ===== -->
+    <section id="faq" class="faq container" aria-labelledby="faqTitle">
       <header class="section-header">
-        <h2 id="faqHeading" class="section-title">Frequently Asked Questions</h2>
+        <h2 id="faqTitle" class="section-title">Frequently Asked Questions</h2>
       </header>
 
       <div class="faq-list">
         <details class="faq-item">
           <summary>How secure is my document?</summary>
-          <div class="faq-body">
-            <p>Documents are encrypted in transit and at rest. We never share your documents without permission. For production, we use secure server-side processing.</p>
-          </div>
+          <div class="faq-body"><p>Documents are encrypted in transit and at rest. We never share your documents without permission. For production, use server-side processing.</p></div>
         </details>
 
         <details class="faq-item">
           <summary>Which file formats are supported?</summary>
-          <div class="faq-body">
-            <p>PDF, DOCX, DOC and plain text (TXT) are supported. Images are not yet supported (OCR planned).</p>
-          </div>
+          <div class="faq-body"><p>PDF, DOCX, DOC and plain text (TXT) are supported. OCR for images planned soon.</p></div>
         </details>
 
         <details class="faq-item">
           <summary>Is the summary legally binding?</summary>
-          <div class="faq-body">
-            <p>No. Summaries are for informational use only and do not constitute legal advice. Consult a lawyer for binding advice.</p>
-          </div>
+          <div class="faq-body"><p>No. Summaries provide information only and are not legal advice. Consult a lawyer for binding advice.</p></div>
         </details>
 
         <details class="faq-item">
           <summary>Can I download the simplified document?</summary>
-          <div class="faq-body">
-            <p>Yes — export as PDF with highlights and summary. We keep original files in your dashboard for convenience.</p>
-          </div>
+          <div class="faq-body"><p>Yes — export as PDF. For demo, this button is disabled until analysis is run.</p></div>
         </details>
       </div>
     </section>
 
-    <!-- ===========================
-         DASHBOARD (SAVED ANALYSES)
-         =========================== -->
-    <section id="dashboard" class="dashboard container" aria-labelledby="dashboardHeading">
+    <!-- ===== DASHBOARD ===== -->
+    <section id="dashboard" class="dashboard container" aria-labelledby="dashboardTitle">
       <header class="section-header">
-        <h2 id="dashboardHeading" class="section-title">Your Dashboard</h2>
-        <p class="section-sub">Saved analyses and document history (stored locally for demo). Sign in to sync with server.</p>
+        <h2 id="dashboardTitle" class="section-title">Your Dashboard</h2>
+        <p class="section-sub">Saved analyses and document history (demo: stored locally in browser).</p>
       </header>
 
       <div class="dashboard-grid">
         <div class="dashboard-left">
           <div class="dashboard-controls">
             <button id="newAnalysis" class="btn btn-primary">New Analysis</button>
-            <input id="searchDocs" class="input input-sm" type="search" placeholder="Search documents...">
+            <input id="searchDocs" class="input input-sm" type="search" placeholder="Search documents..." aria-label="Search documents" />
             <label class="filter-label">Filter:
               <select id="filterSelect" class="select">
                 <option value="all">All</option>
@@ -361,7 +329,6 @@
           </div>
 
           <div id="docList" class="doc-list" role="list" aria-live="polite">
-            <!-- JS will render saved documents here -->
             <div class="empty-state">
               <p class="muted">No saved documents yet. Analyze a document to see it here.</p>
             </div>
@@ -370,62 +337,53 @@
 
         <div class="dashboard-right" id="docDetail" aria-live="polite">
           <h3 class="muted">Select any saved document to view details</h3>
-          <div class="doc-detail-card visually-hidden" id="docDetailCard">
-            <!-- Filled by JS -->
-          </div>
+          <div class="doc-detail-card visually-hidden" id="docDetailCard"></div>
         </div>
       </div>
     </section>
 
-    <!-- ===========================
-         TEAM / ABOUT
-         =========================== -->
-    <section id="team" class="team container">
+    <!-- ===== TEAM ===== -->
+    <section id="team" class="team container" aria-labelledby="teamTitle">
       <header class="section-header">
-        <h2 class="section-title">Team Behind LegalEase</h2>
+        <h2 id="teamTitle" class="section-title">Team Behind LegalEase</h2>
         <p class="section-sub">Small team building tools to make legalese readable for everyone.</p>
       </header>
 
       <div class="team-grid">
         <article class="team-card">
-          <img src="assets/team-naman.jpg" alt="Naman - Founder" class="avatar">
+          <img src="assets/team-naman.jpg" alt="Naman - Founder" class="avatar" />
           <h4>Naman Jha</h4>
           <p class="muted">Founder — Product & Frontend</p>
-          <p>Leads product vision and interface design.</p>
         </article>
 
         <article class="team-card">
-          <img src="assets/team-shreya.jpg" alt="Shreya - Legal" class="avatar">
+          <img src="assets/team-shreya.jpg" alt="Shreya - Legal" class="avatar" />
           <h4>Shreya</h4>
           <p class="muted">Legal Advisor</p>
-          <p>Validates legal explanations and risk flags.</p>
         </article>
 
         <article class="team-card">
-          <img src="assets/team-arya.jpg" alt="Arya - Backend" class="avatar">
+          <img src="assets/team-arya.jpg" alt="Arya - Backend" class="avatar" />
           <h4>Arya</h4>
           <p class="muted">Backend Engineer</p>
-          <p>Builds parsing & processing pipelines.</p>
         </article>
       </div>
     </section>
 
-    <!-- ===========================
-         CONTACT
-         =========================== -->
-    <section id="contact" class="contact container">
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact container" aria-labelledby="contactTitle">
       <header class="section-header">
-        <h2 class="section-title">Contact & Support</h2>
+        <h2 id="contactTitle" class="section-title">Contact & Support</h2>
         <p class="section-sub">Questions? Feedback? Send us a message — we'll respond within 24 hours.</p>
       </header>
 
       <div class="contact-grid">
         <form id="contactForm" class="contact-form" novalidate>
           <label class="form-label" for="contactName">Your name</label>
-          <input id="contactName" class="input" type="text" required>
+          <input id="contactName" class="input" type="text" required />
 
           <label class="form-label" for="contactEmail">Email</label>
-          <input id="contactEmail" class="input" type="email" required>
+          <input id="contactEmail" class="input" type="email" required />
 
           <label class="form-label" for="contactMessage">Message</label>
           <textarea id="contactMessage" class="textarea" rows="6" required></textarea>
@@ -446,9 +404,9 @@
 
           <h3>Follow</h3>
           <div class="social">
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>
@@ -456,10 +414,10 @@
   </main>
 
   <!-- ===========================
-       LOGIN / SIGNUP MODALS (lightweight)
+       AUTH / LOGIN MODAL
        =========================== -->
   <div id="authModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="authTitle">
-    <div class="modal-panel">
+    <div class="modal-panel" role="document">
       <button class="modal-close" id="closeAuth" aria-label="Close">&times;</button>
       <div class="auth-forms">
         <div class="auth-left">
@@ -468,10 +426,10 @@
 
           <form id="loginForm" class="form">
             <label for="loginEmail" class="form-label">Email</label>
-            <input id="loginEmail" type="email" class="input" required>
+            <input id="loginEmail" type="email" class="input" required />
 
             <label for="loginPassword" class="form-label">Password</label>
-            <input id="loginPassword" type="password" class="input" required>
+            <input id="loginPassword" type="password" class="input" required />
 
             <div class="form-actions">
               <button type="submit" class="btn btn-primary">Sign In</button>
@@ -484,13 +442,13 @@
           <h3>Create Account</h3>
           <form id="signupForm" class="form">
             <label for="signupName" class="form-label">Full name</label>
-            <input id="signupName" type="text" class="input" required>
+            <input id="signupName" type="text" class="input" required />
 
             <label for="signupEmail" class="form-label">Email</label>
-            <input id="signupEmail" type="email" class="input" required>
+            <input id="signupEmail" type="email" class="input" required />
 
             <label for="signupPassword" class="form-label">Password</label>
-            <input id="signupPassword" type="password" class="input" required>
+            <input id="signupPassword" type="password" class="input" required />
 
             <div class="form-actions">
               <button type="submit" class="btn btn-primary">Create account</button>
@@ -508,9 +466,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <a href="#home" class="footer-logo">
-          <img src="assets/logo-light.svg" alt="LegalEase">
-        </a>
+        <a href="#home" class="footer-logo"><img src="assets/logo-light.svg" alt="LegalEase" /></a>
         <p class="muted">LegalEase — making legal documents understandable for everyone.</p>
         <small class="muted">© <span id="year">2025</span> LegalEase. All rights reserved.</small>
       </div>
@@ -545,14 +501,13 @@
   </footer>
 
   <!-- ===========================
-       TOOLTIPS / LIVE REGION / ACCESSIBILITY
+       LIVE REGION FOR ACCESSIBILITY
        =========================== -->
   <div id="liveRegion" class="sr-only" aria-live="polite" aria-atomic="true"></div>
 
   <!-- ===========================
        SCRIPTS
        =========================== -->
-  <!-- External JS (will provide full script.js next). Keep defer for accessibility -->
   <script src="script.js" defer></script>
 </body>
 </html>
